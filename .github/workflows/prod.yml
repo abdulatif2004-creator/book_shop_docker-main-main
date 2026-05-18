@@ -25,8 +25,8 @@ jobs:
 
             sed -i "s|image: .*|image: 913524900585.dkr.ecr.eu-central-1.amazonaws.com/book_shop:$IMAGE_VERSION|g" docker-compose.yml
 
-            docker compose -p prod pull
+            docker-compose -p prod pull
 
-            docker compose -p prod down
+            docker-compose -p prod down
 
-            docker compose -p prod up -d
+            docker-compose -p prod up -d
