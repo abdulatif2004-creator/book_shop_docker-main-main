@@ -19,8 +19,7 @@ jobs:
           script: |
             cd /home/${{ secrets.EC2_USER }}/book_shop_test
 
-            git fetch origin prod
-            git reset --hard origin/prod
+           
 
             export IMAGE_VERSION=${{ vars.IMAGE_VERSION }}
 
