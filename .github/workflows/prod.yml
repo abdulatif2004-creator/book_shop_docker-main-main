@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/${{ secrets.EC2_USER }}/book_shop_docker-main/book_shop_docker-main-main
+            cd /home/${{ secrets.EC2_USER }}/book_shop_test
 
             git fetch origin prod
             git reset --hard origin/prod
