@@ -24,7 +24,7 @@ jobs:
 
             export IMAGE_VERSION=${{ vars.IMAGE_VERSION }}
 
-            sed -i "s|image: .*|image: bookshop:$IMAGE_VERSION|g" docker-compose.yml
+            sed -i "s|image: .*|image: 913524900585.dkr.ecr.eu-central-1.amazonaws.com/book_shop:$IMAGE_VERSION|g" docker-compose.yml
 
             docker compose -p prod pull
 
