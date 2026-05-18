@@ -8,11 +8,8 @@ services:
     networks:
       - bookshop_network
 
-  backend:
-    build:
-      context: .
-      args:
-        - ARTIFACT_NAME=${ARTIFACT_NAME:-default.tar.gz}
+ backend:
+  image: 913524900585.dkr.ecr.eu-central-1.amazonaws.com/book_shop:${IMAGE_VERSION}
     command: sh -c "python manage.py migrate && python manage.py collectstatic --noinput && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - static_volume:/app/static
